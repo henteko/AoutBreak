@@ -15,7 +15,7 @@ exit if app_name == ""
 
 
 system("sudo docker build -t henteko/rails .")
-run_command = "sudo docker run -d -p " + port.to_s + ":3000 henteko/rails bundle exec rails s"
+run_command = "sudo docker run -d -p " + port.to_s + ":3000 henteko/rails"
 system(run_command)
 
 puts app_name + '.' + BASE_HOST
