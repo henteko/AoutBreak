@@ -12,4 +12,3 @@ ADD rails_sample /opt/railsapp
 
 WORKDIR /opt/railsapp
 RUN bundle install
-CMD ["bundle", "exec", "rails", "s"]
