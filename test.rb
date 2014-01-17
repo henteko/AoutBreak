@@ -14,8 +14,8 @@ app_name = app_name.chomp
 exit if app_name == ""
 
 
-system("sudo docker build -t henteko/rails .")
-run_command = "sudo docker run -d -p " + port.to_s + ":3000 henteko/rails"
+system("docker build -t henteko/rails .")
+run_command = "docker run -d -p " + port.to_s + ":3000 henteko/rails"
 system(run_command)
 
 puts app_name + '.' + BASE_HOST
