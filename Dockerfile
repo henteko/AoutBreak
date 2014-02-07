@@ -9,7 +9,10 @@ RUN update_rubygems
 RUN gem install bundler sinatra --no-ri --no-rdoc
 
 ADD rails_sample /opt/railsapp
+ADD rails_sample/Gemfile /opt/railsapp/Gemfile
+ADD rails_sample/Gemfile.lock /opt/railsapp/Gemfile.lock
 
 WORKDIR /opt/railsapp
 RUN bundle install
+EXPOSE 3000
 CMD ["bundle", "exec", "rails", "s"] 
